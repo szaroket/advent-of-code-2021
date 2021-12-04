@@ -1,5 +1,6 @@
 # Day 1: Sonar Sweep - Part 1
 
+
 def calculate_number_of_increases():
     with open("data.txt", "r") as f:
         data = f.read().splitlines()
@@ -12,5 +13,5 @@ def calculate_number_of_increases():
     return number_of_increases
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(calculate_number_of_increases())
