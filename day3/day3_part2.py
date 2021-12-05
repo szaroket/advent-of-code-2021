@@ -4,7 +4,7 @@ import numpy as np
 
 def read_data():
     with open("data2.txt", "r") as f:
-        data = [[int(num) for num in line.strip('\n\r')] for line in f]
+        data = [[int(num) for num in line.strip("\n\r")] for line in f]
     return np.array(data)
 
 

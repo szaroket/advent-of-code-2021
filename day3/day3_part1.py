@@ -1,12 +1,15 @@
 # Day 3: Binary Diagnostic
 def read_data():
     with open("data1.txt", "r") as f:
-        data = [[int(num) for num in line.strip('\n\r')] for line in f]
+        data = [[int(num) for num in line.strip("\n\r")] for line in f]
     return data
 
 
 def transpose_matrix(matrix):
-    return [[matrix[row][col] for row in range(len(matrix))] for col in range(len(matrix[0]))]
+    return [
+        [matrix[row][col] for row in range(len(matrix))]
+        for col in range(len(matrix[0]))
+    ]
 
 
 def binary_to_decimal(binary):
@@ -23,7 +26,7 @@ def calculate_gamma_epsilon_rate(matrix):
             if t_matrix[row][col] == 1:
                 number_of_one += 1
 
-        if number_of_one > len(t_matrix[row])/2:
+        if number_of_one > len(t_matrix[row]) / 2:
             gamma_rate.append(1)
             epsilon_rate.append(0)
         else:
