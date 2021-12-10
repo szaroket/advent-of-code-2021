@@ -7,7 +7,9 @@ MARKED_FIELD = -1
 
 def create_list_of_boards(data):
     boards = [[int(num) for num in line.split()] for line in data]
-    list_of_boards = [np.array(boards[line:line+BINGO_SIZE]) for line in range(0, len(boards), 5)]
+    list_of_boards = [
+        np.array(boards[line : line + BINGO_SIZE]) for line in range(0, len(boards), 5)
+    ]
     return list_of_boards
 
 
@@ -16,7 +18,7 @@ def create_list_of_drawn_numbers(data):
 
 
 def read_data():
-    with open("data1.txt", "r") as f:
+    with open("data.txt", "r") as f:
         data = [line.strip() for line in f if line.strip()]
     list_of_drawn_numbers = data.pop(0)
     drawn_numbers = create_list_of_drawn_numbers(list_of_drawn_numbers)
