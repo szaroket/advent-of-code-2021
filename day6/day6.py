@@ -1,6 +1,8 @@
 # Day 6: Lanternfish
 from collections import Counter, deque
 
+NUMBER_OF_DAYS = 256
+
 
 def read_data():
     with open("data.txt", "r") as f:
@@ -26,7 +28,7 @@ def rotate_dict(fish_dict):
 
 
 def create_fish(fish_dict):
-    for day in range(0, 256):
+    for day in range(0, NUMBER_OF_DAYS):
         # checking if there is fish with 0 level
         fish_at_zero = fish_dict[0]
         # rotate values in dict
